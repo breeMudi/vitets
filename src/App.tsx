@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div>
-        <p>WHAT IS THE POINT OF ALL THIS</p>
+        <p>WHAT IS THE POINT OF ALL THIS<br/><span>How about we take it a step further</span></p>
       </div>
       <h1>Vite + React</h1>
       <div className="card">
