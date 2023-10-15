@@ -1,26 +1,30 @@
-import { useState } from 'react'
+import { Canvas } from '@react-three/fiber'
 import './App.css'
+import { OrbitControls } from '@react-three/drei'
+// import Message from './Message'
+import Alert from './Alert'
+import { Color } from 'three'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
+    <Alert>
+      <h1>How about Now!</h1>
+    </Alert>
+    <Canvas>
+      <mesh scale={2}>
+        <boxGeometry />
+        <OrbitControls />
+      </mesh>
+    </Canvas>
+      {/* <div>
         <p>WHAT IS THE POINT OF ALL THIS<br/><span>How about we take it a step further</span></p>
+        
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
     </>
   )
 }
