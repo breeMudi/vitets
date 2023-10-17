@@ -1,22 +1,39 @@
-import { Canvas } from '@react-three/fiber'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import './App.css'
-import { OrbitControls } from '@react-three/drei'
-// import Message from './Message'
-import Alert from './Alert'
-import { Color } from 'three'
+import Home from "./pages/Home"
+import Contact from "./pages/Contact"
+import About from "./pages/About";
 
-function App() {
+
+const App: React.FC = () => {
   return (
     <>
-    <Alert>
+      {/* <Home /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path='/vitets/' element={<Home />}/>
+          <Route path='/vitets/about' element={<About />}/>
+          <Route path='/vitets/contact' element={<Contact />}/>
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+
+export default App
+
+
+
+
+{/* <Alert>
       <h1>How about Now!</h1>
-    </Alert>
-    <Canvas>
+    </Alert> */}
+    {/* <Canvas>
       <mesh scale={2}>
         <boxGeometry />
         <OrbitControls />
       </mesh>
-    </Canvas>
+    </Canvas> */}
       {/* <div>
         <p>WHAT IS THE POINT OF ALL THIS<br/><span>How about we take it a step further</span></p>
         
@@ -25,8 +42,3 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
-    </>
-  )
-}
-
-export default App
